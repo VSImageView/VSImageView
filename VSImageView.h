@@ -4,7 +4,7 @@
 //
 //  Created by 杨进鹏 on 14/8/11.
 //  Copyright (c) 2014年 viplux. All rights reserved.
-//  VSImageView封装了网络图片加载功能，使用SDWebimage下载图片。提供2种加载等待动画，图片家在失败重试功能
+//  VSImageView封装了网络图片加载功能，使用SDWebimage下载图片。提供2种加载等待动画，图片加载失败重试功能
 
 #import <UIKit/UIKit.h>
 /*
