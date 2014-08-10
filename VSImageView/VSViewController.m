@@ -7,6 +7,7 @@
 //
 
 #import "VSViewController.h"
+#import "UIImageView+VS.h"
 
 @interface VSViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    UIImageView *imgView = [[UIImageView alloc] init];
+    imgView.frame = CGRectMake(10, 20, 100, 100);
+    [imgView setImageUrl:[NSURL URLWithString:@"http://www.baidu.com/flasg.jpg"] placeHolderImage:nil];
+    [self.view addSubview:imgView];
 }
 
 - (void)didReceiveMemoryWarning
