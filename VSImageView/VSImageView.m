@@ -35,6 +35,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = VSColor(40, 40, 40);
+        
+        UILabel *errmsgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0 , 10, frame.size.width, 30)];
+        errmsgLabel.text = @"图片下载失败";
+        errmsgLabel.textAlignment = NSTextAlignmentCenter;
+        errmsgLabel.font = [UIFont systemFontOfSize:14];
+        errmsgLabel.textColor = [UIColor whiteColor];
+        [self addSubview:errmsgLabel];
     }
     return self;
 }
@@ -94,14 +101,5 @@
 {
     
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
