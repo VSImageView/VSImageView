@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FB024A01997C184007A738B /* GHImageViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0249D1997C184007A738B /* GHImageViewProgressView.m */; };
-		2FB024A11997C184007A738B /* UIImageView+VS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0249F1997C184007A738B /* UIImageView+VS.m */; };
+		2FB024A01997C184007A738B /* VSImageViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0249D1997C184007A738B /* VSImageViewProgressView.m */; };
 		2FB024BE1997C23A007A738B /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024A41997C23A007A738B /* NSData+GIF.m */; };
 		2FB024BF1997C23A007A738B /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024A61997C23A007A738B /* SDImageCache.m */; };
 		2FB024C01997C23A007A738B /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024A81997C23A007A738B /* SDWebImageCompat.m */; };
@@ -22,6 +21,8 @@
 		2FB024C81997C23A007A738B /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024B91997C23A007A738B /* UIImage+MultiFormat.m */; };
 		2FB024C91997C23A007A738B /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024BB1997C23A007A738B /* UIImage+WebP.m */; };
 		2FB024CA1997C23A007A738B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024BD1997C23A007A738B /* UIImageView+WebCache.m */; };
+		2FB024D21997D8D6007A738B /* VSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024D11997D8D6007A738B /* VSImageView.m */; };
+		2FB204641997DF4C00C2A26A /* ph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB204631997DF4C00C2A26A /* ph.jpg */; };
 		2FD5305919979443000B82FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5305819979443000B82FB /* Foundation.framework */; };
 		2FD5305B19979443000B82FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5305A19979443000B82FB /* CoreGraphics.framework */; };
 		2FD5305D19979443000B82FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5305C19979443000B82FB /* UIKit.framework */; };
@@ -50,10 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2FB0249C1997C184007A738B /* GHImageViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHImageViewProgressView.h; sourceTree = "<group>"; };
-		2FB0249D1997C184007A738B /* GHImageViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHImageViewProgressView.m; sourceTree = "<group>"; };
-		2FB0249E1997C184007A738B /* UIImageView+VS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+VS.h"; sourceTree = "<group>"; };
-		2FB0249F1997C184007A738B /* UIImageView+VS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+VS.m"; sourceTree = "<group>"; };
+		2FB0249C1997C184007A738B /* VSImageViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSImageViewProgressView.h; sourceTree = "<group>"; };
+		2FB0249D1997C184007A738B /* VSImageViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSImageViewProgressView.m; sourceTree = "<group>"; };
 		2FB024A31997C23A007A738B /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
 		2FB024A41997C23A007A738B /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
 		2FB024A51997C23A007A738B /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -81,6 +80,9 @@
 		2FB024BB1997C23A007A738B /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		2FB024BC1997C23A007A738B /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		2FB024BD1997C23A007A738B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		2FB024D01997D8D6007A738B /* VSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSImageView.h; sourceTree = "<group>"; };
+		2FB024D11997D8D6007A738B /* VSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSImageView.m; sourceTree = "<group>"; };
+		2FB204631997DF4C00C2A26A /* ph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ph.jpg; sourceTree = "<group>"; };
 		2FD5305519979443000B82FB /* VSImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD5305819979443000B82FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FD5305A19979443000B82FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,13 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		2FB024CB1997C92B007A738B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		2FD5304C19979442000B82FB = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +211,11 @@
 		2FD5305E19979443000B82FB /* VSImageView */ = {
 			isa = PBXGroup;
 			children = (
-				2FB0249C1997C184007A738B /* GHImageViewProgressView.h */,
-				2FB0249D1997C184007A738B /* GHImageViewProgressView.m */,
-				2FB0249E1997C184007A738B /* UIImageView+VS.h */,
-				2FB0249F1997C184007A738B /* UIImageView+VS.m */,
+				2FB024CB1997C92B007A738B /* iPad */,
+				2FB0249C1997C184007A738B /* VSImageViewProgressView.h */,
+				2FB0249D1997C184007A738B /* VSImageViewProgressView.m */,
+				2FB024D01997D8D6007A738B /* VSImageView.h */,
+				2FB024D11997D8D6007A738B /* VSImageView.m */,
 				2FB024721997C15B007A738B /* lib */,
 				2FD5306719979443000B82FB /* VSAppDelegate.h */,
 				2FD5306819979443000B82FB /* VSAppDelegate.m */,
@@ -213,6 +223,7 @@
 				2FD5306D19979443000B82FB /* Main_iPad.storyboard */,
 				2FD5307019979443000B82FB /* VSViewController.h */,
 				2FD5307119979443000B82FB /* VSViewController.m */,
+				2FB204631997DF4C00C2A26A /* ph.jpg */,
 				2FD5307319979443000B82FB /* Images.xcassets */,
 				2FD5305F19979443000B82FB /* Supporting Files */,
 			);
@@ -296,6 +307,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = viplux;
 				TargetAttributes = {
+					2FD5305419979443000B82FB = {
+						DevelopmentTeam = 47GP3PCUWZ;
+					};
 					2FD5307819979443000B82FB = {
 						TestTargetID = 2FD5305419979443000B82FB;
 					};
@@ -325,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB204641997DF4C00C2A26A /* ph.jpg in Resources */,
 				2FD5306F19979443000B82FB /* Main_iPad.storyboard in Resources */,
 				2FD5307419979443000B82FB /* Images.xcassets in Resources */,
 				2FD5306C19979443000B82FB /* Main_iPhone.storyboard in Resources */,
@@ -354,13 +369,13 @@
 				2FB024C71997C23A007A738B /* UIImage+GIF.m in Sources */,
 				2FB024C51997C23A007A738B /* SDWebImagePrefetcher.m in Sources */,
 				2FB024BE1997C23A007A738B /* NSData+GIF.m in Sources */,
+				2FB024D21997D8D6007A738B /* VSImageView.m in Sources */,
 				2FD5306519979443000B82FB /* main.m in Sources */,
 				2FB024C91997C23A007A738B /* UIImage+WebP.m in Sources */,
 				2FB024C21997C23A007A738B /* SDWebImageDownloader.m in Sources */,
 				2FB024C61997C23A007A738B /* UIButton+WebCache.m in Sources */,
 				2FD5306919979443000B82FB /* VSAppDelegate.m in Sources */,
-				2FB024A11997C184007A738B /* UIImageView+VS.m in Sources */,
-				2FB024A01997C184007A738B /* GHImageViewProgressView.m in Sources */,
+				2FB024A01997C184007A738B /* VSImageViewProgressView.m in Sources */,
 				2FB024CA1997C23A007A738B /* UIImageView+WebCache.m in Sources */,
 				2FB024C41997C23A007A738B /* SDWebImageManager.m in Sources */,
 				2FB024C11997C23A007A738B /* SDWebImageDecoder.m in Sources */,
@@ -499,10 +514,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VSImageView/VSImageView-Prefix.pch";
 				INFOPLIST_FILE = "VSImageView/VSImageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -512,10 +532,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VSImageView/VSImageView-Prefix.pch";
 				INFOPLIST_FILE = "VSImageView/VSImageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
