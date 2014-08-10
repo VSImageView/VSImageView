@@ -7,23 +7,40 @@
 //
 
 #import "VSViewController.h"
-#import "UIImageView+VS.h"
+#import "VSImageView.h"
 
 @interface VSViewController ()
 
 @end
 
 @implementation VSViewController
+{
+    VSImageView *_imgView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ph.jpg"]];
     
-    UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.frame = CGRectMake(10, 20, 100, 100);
-    [imgView setImageUrl:[NSURL URLWithString:@"http://www.baidu.com/flasg.jpg"] placeHolderImage:nil];
-    [self.view addSubview:imgView];
+    _imgView = [[VSImageView alloc] init];
+    _imgView.frame = CGRectMake(10, 30, 160, 160);
+    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
+    [self.view addSubview:_imgView];
+    
+    //
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 300, 80, 30)];
+    [btn setTitle:@"重新下载" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(reDownLoad) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+//    VSImageView *vsImageView = [[VSImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
+
+- (void)reDownLoad
+{
+    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
 }
 
 - (void)didReceiveMemoryWarning
