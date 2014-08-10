@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GHImageViewProgressView : UIView
+#define VSColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:(r) / 255.0 blue:(r) / 255.0 alpha:1.0]
+#define VSColorWithAlpha(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(r) / 255.0 blue:(r) / 255.0 alpha:a]
+
+@interface VSImageViewProgressView : UIView
 
 @property (nonatomic, assign) CGFloat width;
 

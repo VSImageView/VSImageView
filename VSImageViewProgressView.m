@@ -6,13 +6,11 @@
 //  Copyright (c) 2014年 viplux. All rights reserved.
 //  图片下载进度展示视图
 
-#import "GHImageViewProgressView.h"
+#import "VSImageViewProgressView.h"
 
-#define VSColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:(r) / 255.0 blue:(r) / 255.0 alpha:1.0]
-#define VSColorWithAlpha(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(r) / 255.0 blue:(r) / 255.0 alpha:a]
 #define VSAngle2Radian(angle) ((M_PI / 180.0) * angle)
 
-@implementation GHImageViewProgressView
+@implementation VSImageViewProgressView
 {
     CGFloat _pregress;
 }
@@ -59,8 +57,7 @@
     CGPoint center = CGPointMake((wh + 10) * 0.5, (wh + 19.5) * 0.5);
     CGContextMoveToPoint(context, center.x, center.y);
     [[UIColor whiteColor] setFill];
-//    CGContextAddEllipseInRect(context, CGRectMake(11.5, 16.5, wh - 13, wh - 13));
-    CGFloat radius = 63.5;//(wh - 26) * 0.5;
+    CGFloat radius = 67.5;//(wh - 26) * 0.5;
     CGFloat x = center.x;//(wh + 5) * 0.5;//radius * 2 - 11.5;
     CGFloat y = center.y;//(wh + 10) * 0.5;//radius * 2 - 16.5;
     
@@ -70,18 +67,6 @@
     CGContextAddArc(context, x, y, radius, startAngel, endAngel, 0);
     CGContextClosePath(context);
     CGContextDrawPath(context, kCGPathFill);
-
-//    wh -= 16;
-//    [VSColorWithAlpha(30, 30, 30, 0.7) setStroke];
-//    CGContextSetLineWidth(context, 15);
-//    CGContextAddEllipseInRect(context, CGRectMake(5, 5, wh, wh));
-//    CGContextDrawPath(context, kCGPathStroke);
 }
-
-- (void)dealloc
-{
-    NSLog(@"GHImageViewProgressView dealloc");
-}
-
 
 @end
