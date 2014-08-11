@@ -97,6 +97,11 @@
     }];
 }
 
+- (void)setImageUrl:(NSString *)imageUrl placeHolderImage:(UIImage *)placeHolderImage
+{
+    
+}
+
 - (void)setImageUrl:(NSString *)imageUrl animationType:(VSImageViewAnimationType)animationType
 {
     
