@@ -70,3 +70,18 @@
 }
 
 @end
+
+
+@implementation VSImageViewProgressChartView
+
+@end
+
+@implementation VSImageViewProgressActivityView
+
+@end
+
+@implementation VSImageViewProgressTextView
+
+@end
+
+

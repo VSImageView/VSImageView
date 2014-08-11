@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F5BBA21998756500A16819 /* VSImageView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 29F5BBA11998756400A16819 /* VSImageView.gif */; };
 		2FB024A01997C184007A738B /* VSImageViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0249D1997C184007A738B /* VSImageViewProgressView.m */; };
 		2FB024BE1997C23A007A738B /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024A41997C23A007A738B /* NSData+GIF.m */; };
 		2FB024BF1997C23A007A738B /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB024A61997C23A007A738B /* SDImageCache.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29F5BBA11998756400A16819 /* VSImageView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = VSImageView.gif; sourceTree = "<group>"; };
 		2FB0249C1997C184007A738B /* VSImageViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSImageViewProgressView.h; sourceTree = "<group>"; };
 		2FB0249D1997C184007A738B /* VSImageViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSImageViewProgressView.m; sourceTree = "<group>"; };
 		2FB024A31997C23A007A738B /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		2FD5305E19979443000B82FB /* VSImageView */ = {
 			isa = PBXGroup;
 			children = (
+				29F5BBA11998756400A16819 /* VSImageView.gif */,
 				2FB024CB1997C92B007A738B /* iPad */,
 				2FB0249C1997C184007A738B /* VSImageViewProgressView.h */,
 				2FB0249D1997C184007A738B /* VSImageViewProgressView.m */,
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F5BBA21998756500A16819 /* VSImageView.gif in Resources */,
 				2FB204641997DF4C00C2A26A /* ph.jpg in Resources */,
 				2FD5306F19979443000B82FB /* Main_iPad.storyboard in Resources */,
 				2FD5307419979443000B82FB /* Images.xcassets in Resources */,

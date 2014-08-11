@@ -107,4 +107,9 @@
     
 }
 
+- (VSImageViewProgressView *)progressViewWithAnimationType:(VSImageViewAnimationType)animationType
+{
+    
+}
+
 @end
