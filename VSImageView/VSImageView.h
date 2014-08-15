@@ -14,7 +14,7 @@
 /*
  *  默认占位图片
  */
-#define kDefaultPlaceHolderImage ([UIImage imageNamed:@"VSImageView.gif"])
+#define kDefaultPlaceHolderImage ([UIImage imageNamed:@"ph.jpg"])
 
 /**
  *  下载图片过程等待动画类型枚举

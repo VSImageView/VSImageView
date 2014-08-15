@@ -27,8 +27,8 @@
     _imgView = [[VSImageView alloc] init];
     _imgView.frame = CGRectMake(10, 30, 160, 160);
 //    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
-    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
-
+//    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
+    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg" animationType:VSImageViewAnimationTypeChart];
     [self.view addSubview:_imgView];
     
     //
@@ -42,7 +42,7 @@
 
 - (void)reDownLoad
 {
-    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg"];
+    [_imgView setImageUrl:@"http://images-fast.digu.com/34bcdc5b7af548d59d7ac32ed04f0a450001.jpg" animationType:VSImageViewAnimationTypeChart];
 }
 
 - (void)didReceiveMemoryWarning

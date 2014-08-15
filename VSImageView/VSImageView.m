@@ -46,6 +46,18 @@
     return self;
 }
 
+/**
+ *  从指定的视图中移除所有VSImageErrorView视图
+ */
++ (void)removeErrorViewFromSuperView:(UIView *)superView
+{
+    for (UIView *subView in superView.subviews) {
+        if ([subView isMemberOfClass:[self class]]) {
+            [subView removeFromSuperview];
+        }
+    }
+}
+
 @end
 
 @implementation VSImageView
@@ -65,6 +77,7 @@
 
 - (void)setImageUrl:(NSString *)imageUrl
 {
+    [VSImageErrorView removeErrorViewFromSuperView:self];
     // 保存网络图片地址
     _imageURL = imageUrl;
     // 创建一个加载动画视图
@@ -104,12 +117,60 @@
 
 - (void)setImageUrl:(NSString *)imageUrl animationType:(VSImageViewAnimationType)animationType
 {
+    [VSImageErrorView removeErrorViewFromSuperView:self];
+    // 保存网络图片地址
+    _imageURL = imageUrl;
+    // 创建一个加载动画视图
+    VSImageViewProgressView *pView = [self progressViewWithAnimationType:animationType];
+    [self addSubview:pView];
     
+    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] cleanDisk];
+    [[SDImageCache sharedImageCache] clearMemory];
+    // 防止循环引用引发内存泄漏 创建一个self的临时引用
+    __block UIView *tempView = self;
+    // 使用SDWebImage下载图片
+    [self setImageWithURL:VSURL(imageUrl) placeholderImage:kDefaultPlaceHolderImage options:SDWebImageRetryFailed progress:^(NSUInteger receivedSize, long long expectedSize) {
+        [pView updateProgress:receivedSize / (CGFloat)expectedSize];
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        if (error) { // 网络图片下载失败
+            [pView removeFromSuperview];
+            [tempView addSubview:[VSImageErrorView imageErrorViewWithFrame:tempView.bounds]];
+        } else { // 图片下载成功
+            [pView updateProgress:1.0];
+            // 在0.1秒之后移出加载动画视图
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [pView removeFromSuperview];
+            });
+        }
+    }];
 }
 
+/**
+ *  根据动画类型返回对应的动画视图
+ *
+ *  @param animationType 动画类型枚举
+ */
 - (VSImageViewProgressView *)progressViewWithAnimationType:(VSImageViewAnimationType)animationType
 {
-    
+    VSImageViewProgressView *ret = nil;
+    switch (animationType) {
+        case VSImageViewAnimationTypeActivity:
+            ret = [[VSImageViewProgressActivityView alloc] initWithFrame:self.bounds];
+            break;
+        case VSImageViewAnimationTypeText:
+            ret = [[VSImageViewProgressTextView alloc] initWithFrame:self.bounds];
+            break;
+        case VSImageViewAnimationTypeChart:
+            ret = [[VSImageViewProgressChartView alloc] initWithFrame:self.bounds];
+            ret.width = 80;
+            ret.height = 80;
+            break;
+         default:
+            break;
+    }
+    return ret;
 }
 
 @end

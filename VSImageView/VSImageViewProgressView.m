@@ -11,6 +11,15 @@
 #define VSAngle2Radian(angle) ((M_PI / 180.0) * angle)
 
 @implementation VSImageViewProgressView
+
+- (void)updateProgress:(CGFloat)progress
+{
+    
+}
+
+@end
+
+@implementation VSImageViewProgressChartView
 {
     CGFloat _pregress;
 }
@@ -38,28 +47,39 @@
 - (void)drawRect:(CGRect)rect
 {
     CGFloat wh = self.width > self.height ? self.height : self.width;
-    wh -= 10;
+
     CGContextRef context = UIGraphicsGetCurrentContext();
-   // CGContextAddRect(context, CGRectMake(0, 0, wh, wh));
     
+    CGFloat x = (self.frame.size.width - wh) * 0.5;
+    CGFloat y = (self.frame.size.height - wh) * 0.5;
     // 先画背景圆
     [VSColorWithAlpha(0, 0, 0, 0.6) setFill];
-    CGContextAddEllipseInRect(context, CGRectMake(5, 10, wh, wh));
+    CGContextAddEllipseInRect(context, CGRectMake(x, y, wh, wh));
     CGContextDrawPath(context, kCGPathFill);
     
     // 中间的白色圆环
+    // 线条宽度
+    CGFloat circleLineW = 2;
+    // 外圈距离边境距离
+    CGFloat circleLineEdgeW = 2.7;
+    CGFloat circleWH = wh - 2 * circleLineEdgeW;
+    x = (self.frame.size.width - circleWH) * 0.5;
+    y = (self.frame.size.height - circleWH) * 0.5;
+
     [[UIColor whiteColor] setStroke];
-    CGContextSetLineWidth(context, 2);
-    CGContextAddEllipseInRect(context, CGRectMake(9, 14, wh - 8, wh - 8));
+    CGContextSetLineWidth(context, circleLineW);
+    CGContextAddEllipseInRect(context, CGRectMake(x, y, circleWH, circleWH));
     CGContextDrawPath(context, kCGPathStroke);
     
-    // 中间的扇形
-    CGPoint center = CGPointMake((wh + 10) * 0.5, (wh + 19.5) * 0.5);
+    // 标识进度的扇形
+    CGPoint center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
     CGContextMoveToPoint(context, center.x, center.y);
     [[UIColor whiteColor] setFill];
-    CGFloat radius = 67.5;//(wh - 26) * 0.5;
-    CGFloat x = center.x;//(wh + 5) * 0.5;//radius * 2 - 11.5;
-    CGFloat y = center.y;//(wh + 10) * 0.5;//radius * 2 - 16.5;
+    // 扇形距离外圈距离
+    CGFloat chartMarginCircleW = 2.5;
+    CGFloat radius = circleWH * 0.5 - chartMarginCircleW;//(wh - 26) * 0.5;
+    x = center.x;//(wh + 5) * 0.5;//radius * 2 - 11.5;
+    y = center.y;//(wh + 10) * 0.5;//radius * 2 - 16.5;
     
     CGFloat startAngel = 0;
     CGFloat angel = (_pregress <= 0 ? 0.01 : _pregress) * 360;
@@ -68,15 +88,42 @@
     CGContextClosePath(context);
     CGContextDrawPath(context, kCGPathFill);
 }
-
 @end
 
-
-@implementation VSImageViewProgressChartView
-
-@end
+// 菊花宽高
+#define kActivityWH 20.0f
 
 @implementation VSImageViewProgressActivityView
+{
+    UIActivityIndicatorView *_activityView;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        self.backgroundColor = [UIColor whiteColor];
+        
+        _activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        
+        CGFloat x = (frame.size.width - kActivityWH) * 0.5;
+        CGFloat y = (frame.size.height - kActivityWH) * 0.5;
+
+        _activityView.frame = CGRectMake(x, y, kActivityWH, kActivityWH);
+        [self addSubview:_activityView];
+    }
+    return self;
+}
+
+- (void)updateProgress:(CGFloat)progress
+{
+    if (progress == 1.0) {
+        [_activityView stopAnimating];
+    } else {
+        [_activityView startAnimating];
+    }
+}
 
 @end
 
