@@ -38,6 +38,12 @@
     [self.view addSubview:btn];
     
 //    VSImageView *vsImageView = [[VSImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    
+    
+//    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+//    progressView.tintColor = [UIColor blueColor];
+//    progressView.frame = CGRectMake(100, 300, 80, 80);
+//    [self.view addSubview:progressView];
 }
 
 - (void)reDownLoad
